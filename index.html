@@ -1,118 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>MusaabK99</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <header>
-      <img src="assets/svg/logo.svg" alt="MusaabK99 logo" />
-      <nav class="navigation">
-        <ul>
-          <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#MyWorks">My Works</a></li>
-          <li><a href="#contactMe">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <hr />
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد اللطيف ياسر - الصفحة الشخصية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <section class="hero">
-      <img class="arrow" src="assets/svg/arrow.svg" alt="arrow" />
-      <div class="heroSub">
-        <h1 class="name">I’m Musaab</h1>
-        <h1 class="title">Software Engineer</h1>
-        <div class="heroBtns">
-          <a class="hireMe" href="#contactMe">Hire me</a>
-          <a class="cv" href="assets/Musaab_Kubbi_Software_Engineer.pdf" download
-            >Download CV
-            <img src="assets/svg/download.svg" alt="download button"
-          /></a>
-        </div>
-      </div>
-      <img src="assets/svg/Hero.svg" alt="hero image" class="heroImg" />
-    </section>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    <section class="aboutMe" id="aboutMe">
-      <img
-        src="assets/svg/AboutMe.svg"
-        alt="aboutMe image"
-        class="aboutMeImg"
-      />
-      <div class="textContainer">
-        <div class="textTitle">
-          <h1 class="aboutName">About</h1>
-          <h1 class="aboutTitle">me</h1>
-          <img src="assets/svg/lightbulb.svg" alt="ligh" class="light" />
-        </div>
-        <p class="aboutMePar">
-          Hey, I'm Musaab, a Software Engineer who loves turning complex ideas into simple, sleek solutions. Currently diving into mobile app development to level up my skills. I enjoy building cool stuff, experimenting with new tech, and making things look and feel great.
-        </p>
-      </div>
-    </section>
+        .card {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid #2d2d2d;
+        }
 
-    <section class="works" id="MyWorks">
-      <div class="worksContainer">
-        <div class="projectTitle">
-          <h1 class="aboutName">My recent</h1>
-          <h1 class="aboutTitle">works</h1>
-        </div>
-        <ul>
-          <li>
-            <a href=""
-              ><img src="assets/imgs/landingPage.png" alt="landing Page"
-            /></a>
-          </li>
-          <li>
-            <a href=""><img src="assets/imgs/webApp.png" alt="Wep App" /></a>
-          </li>
-          <li>
-            <a href=""><img src="assets/imgs/app.png" alt="App" /></a>
-          </li>
-        </ul>
-      </div>
-    </section>
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background-color: #ff6b00;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            color: #fff;
+        }
 
-    <section class="contactContainer" id="contactMe">
-      <div class="contactTitle">
-        <h1 class="aboutName">Contact</h1>
-        <h1 class="aboutTitle">me</h1>
-      </div>
-      <div class="contact">
-        <div class="emailAndPhone">
-          <img src="assets/svg/Email.svg" alt="email logo" />
-          <a href="mailto:mkbusiness202@gmail.com"
-            ><h3>mkbusiness202@gmail.com</h3></a
-          >
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        p.title {
+            color: #a0a0a0;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info span {
+            display: block;
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 5px;
+        }
+
+        .contact-info a {
+            color: #ff6b00;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- دائرة افتراضية للحرف الأول من الاسم -->
+        <div class="profile-img">ع</div>
+        
+        <!-- الاسم الخاص بك -->
+        <h1>عبد اللطيف ياسر</h1>
+        <p class="title">مطور ويب / مهندس</p>
+        
+        <div class="contact-info">
+            <span>رقم الهاتف للاتصال</span>
+            <a href="tel:+201550463800">+20 1550463800</a>
         </div>
-        <div class="emailAndPhone">
-          <img src="assets/svg/phone.svg" alt="phone logo" />
-          <h3>+0123456789</h3>
-        </div>
-      </div>
-      <div class="socialMedia">
-        <a
-          href="https://www.linkedin.com/in/musaabkubbi/"
-          target="_blank"
-          ><img src="assets/svg/linkedin.svg" alt="my linkedin account"
-        /></a>
-        <a href="https://github.com/MusaabK99" target="_blank"
-          ><img src="assets/svg/github.svg" alt=" my github account"
-        /></a>
-        <a href="https://x.com/MusaabK99" target="_blank"
-          ><img src="assets/svg/twitter.svg" alt="my x account"
-        /></a>
-        <a href="https://youtu.be/VzAxCThj_5k?si=4WwLBuOnbGhgAQ2q" target="_blank"
-          ><img src="assets/svg/youtube.svg" alt="my youtube channel"
-        /></a>
-      </div>
-    </section>
-    <hr />
-    <footer>
-      <p>Built by MK.</p>
-    </footer>
-  </body>
+
+        <!-- زر سريع لفتح محادثة واتساب مباشرة -->
+        <a href="https://wa.me/201550463800" target="_blank" class="btn-whatsapp">
+            تواصل معي عبر واتساب
+        </a>
+    </div>
+
+</body>
 </html>
